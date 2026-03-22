@@ -1,0 +1,138 @@
+:root {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  color: #f5f7f2;
+  background:
+    radial-gradient(circle at top left, rgba(241, 107, 80, 0.28), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(55, 142, 122, 0.3), transparent 30%),
+    #101514;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.hero,
+.panel {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  backdrop-filter: blur(12px);
+  background: rgba(9, 14, 13, 0.7);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.hero {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #ff9e7a;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 10ch;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.92;
+}
+
+.lead {
+  margin: 1.5rem 0 0;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  color: rgba(245, 247, 242, 0.82);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.actions a {
+  color: #101514;
+  text-decoration: none;
+  background: #f3f1ea;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.actions a:last-child {
+  background: transparent;
+  color: #f3f1ea;
+  border: 1px solid rgba(243, 241, 234, 0.28);
+}
+
+.panel {
+  padding: 2rem;
+  align-self: center;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.panel ul {
+  margin: 1.2rem 0 0;
+  padding-left: 1.2rem;
+  color: rgba(245, 247, 242, 0.84);
+}
+
+.panel li + li {
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .hero,
+  .panel {
+    padding: 1.5rem;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.8rem, 16vw, 4.5rem);
+  }
+}
