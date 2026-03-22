@@ -1,0 +1,10 @@
+{
+  "name": "courses-platform-backend-javascript",
+  "module": "src/server.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/server.js",
+    "start": "bun run src/server.js"
+  }
+}
